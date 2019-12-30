@@ -16,6 +16,7 @@
 		7E62A24D23AA9C8F00D23AFA /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62A24C23AA9C8F00D23AFA /* Card.swift */; };
 		7E62A24F23AA9CF000D23AFA /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62A24E23AA9CF000D23AFA /* CardController.swift */; };
 		7E62A25123AA9D3400D23AFA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */; };
+		7EF3B49723BAB2500018D484 /* CardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF3B49623BAB2500018D484 /* CardError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		7E62A24E23AA9CF000D23AFA /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 		7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		7EC27C5023B9EADC002859DD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7EF3B49623BAB2500018D484 /* CardError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				7E62A25023AA9D3400D23AFA /* UIViewControllerExtension.swift */,
+				7EF3B49623BAB2500018D484 /* CardError.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -128,7 +131,6 @@
 				7E62A23023AA9BB700D23AFA /* Sources */,
 				7E62A23123AA9BB700D23AFA /* Frameworks */,
 				7E62A23223AA9BB700D23AFA /* Resources */,
-				7E615AB723BA81A100A73A1D /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -185,27 +187,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7E615AB723BA81A100A73A1D /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7E62A23023AA9BB700D23AFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -216,6 +197,7 @@
 				7E62A25123AA9D3400D23AFA /* UIViewControllerExtension.swift in Sources */,
 				7E62A23823AA9BB700D23AFA /* AppDelegate.swift in Sources */,
 				7E62A23A23AA9BB700D23AFA /* SceneDelegate.swift in Sources */,
+				7EF3B49723BAB2500018D484 /* CardError.swift in Sources */,
 				7E62A24D23AA9C8F00D23AFA /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,8 @@
 
 import Foundation
 
-// The Swift models are a reflection of the JSON structure we receive from the server.
-// We have to build out the top level in order to drill down to the Card object in the JSON.
+// Our Swift models reflect the JSON structure.
+// We have to build out TopLevelObject in order to drill down to Card.
 
 // The top level JSON object.
 struct TopLevelObject: Decodable {

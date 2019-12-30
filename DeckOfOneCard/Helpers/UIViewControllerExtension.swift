@@ -11,8 +11,7 @@ import UIKit
 // Recommend they create a snippet.
 extension UIViewController {
     
-    // Has to be a LocalizedError so we can print the error.errorDescription.
-    // As of Swift 5.1, ".localizedDescription" still ignores custom descriptions. Probably a bug.
+    // Has to be a LocalizedError so we can print the error.errorDescription - localizedDecription strips away custom descriptions.
     func presentErrorToUser(localizedError: LocalizedError) {
         
         let alertController = UIAlertController(title: "ERROR", message: localizedError.errorDescription, preferredStyle: .actionSheet)
