@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hto-X0-1io">
+                                <rect key="frame" x="83" y="318.5" width="248" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" (value) and (suit) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzc-Kh-l3e">
+                                <rect key="frame" x="138" y="74" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eO-XF-SE0">
+                                <rect key="frame" x="166.5" y="637.5" width="81" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title=" Draw "/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="9aQ-LV-EMC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6eO-XF-SE0" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="Is9-SV-rxA"/>
+                            <constraint firstItem="hto-X0-1io" firstAttribute="height" secondItem="IZa-P0-4L8" secondAttribute="height" multiplier="0.3" id="PAV-6m-mtJ"/>
+                            <constraint firstItem="hto-X0-1io" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="TeP-cQ-BYh"/>
+                            <constraint firstItem="6eO-XF-SE0" firstAttribute="top" secondItem="hto-X0-1io" secondAttribute="bottom" constant="50" id="Ucw-4F-dd8"/>
+                            <constraint firstItem="hzc-Kh-l3e" firstAttribute="top" secondItem="dAx-36-yHn" secondAttribute="top" constant="30" id="YbN-eQ-HrP"/>
+                            <constraint firstItem="hto-X0-1io" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="hV7-0G-TRw"/>
+                            <constraint firstItem="hzc-Kh-l3e" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="oqd-MS-2Pr"/>
+                            <constraint firstItem="hto-X0-1io" firstAttribute="width" secondItem="IZa-P0-4L8" secondAttribute="width" multiplier="0.6" id="sbo-DC-BWI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="hto-X0-1io" id="mYG-CU-oab"/>
+                        <outlet property="cardLabel" destination="hzc-Kh-l3e" id="y6j-Tc-ViY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="-254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
