@@ -19,8 +19,8 @@ class CardController {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         let count = URLQueryItem(name: "count", value: "1")
         components?.queryItems = [count]
-        guard let finalURL = components?.url else { return completion(.failure(.invalidURL))}
-        print(finalURL)
+        guard let finalURL = components?.url else { return completion(.failure(.invalidURL)) }
+        //print(finalURL)
         
         URLSession.shared.dataTask(with: finalURL) { (data, _, error) in
             if let error = error {
@@ -34,7 +34,8 @@ class CardController {
             guard let data = data else { return completion(.failure(.noData))}
             
             do {
-                let card = try JSONDecoder().decode(Card.self, from: data)
+                let topLevel = try JSONDecoder().decode(TopLevelObject.self, from: data)
+                guard let card = topLevel.cards.first else { return completion(.failure(.noData)) }
                 completion(.success(card))
             } catch {
                 print("===== ERROR =====")
